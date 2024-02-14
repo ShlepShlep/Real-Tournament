@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  smokeParticles: {fileID: 1174303361917958903, guid: c297a13e087cce24b8796da97cbca4f9,
+    type: 3}
 --- !u!54 &8926415952611074303
 Rigidbody:
   m_ObjectHideFlags: 0
