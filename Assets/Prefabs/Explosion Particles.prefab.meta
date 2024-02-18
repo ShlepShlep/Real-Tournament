@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/Smoke Grenade.prefab.meta
+guid: c297a13e087cce24b8796da97cbca4f9
+========
+guid: b0166f44ef200e340a93e2ab28e0880c
+>>>>>>>> 5331715 (Particles Task):Assets/Prefabs/Explosion Particles.prefab.meta
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
