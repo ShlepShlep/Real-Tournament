@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1546808915557829276}
   - component: {fileID: 2326917798761770847}
   m_Layer: 0
-  m_Name: Rocket Smoke
+  m_Name: RocketSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

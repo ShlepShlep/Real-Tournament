@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5580854351691085623}
   - component: {fileID: 1624858126259356581}
   m_Layer: 0
-  m_Name: Rocket_Smoke_Aretas
+  m_Name: RocketSmokeAretas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
