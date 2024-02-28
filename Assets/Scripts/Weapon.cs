@@ -19,7 +19,7 @@ public class Weapon : MonoBehaviour
 	public int bulletsPerShot = 1;
 	void Update()
 	{
-		// manual mode
+		/*// manual mode
 		if (!isAutoFire && Input.GetKeyDown(KeyCode.Mouse0))
 		{
 			Shoot();
@@ -41,7 +41,7 @@ public class Weapon : MonoBehaviour
 			Reload();
 		}
 
-		fireCooldown -= Time.deltaTime;
+		fireCooldown -= Time.deltaTime;*/
 	}
 
 	public void Shoot()
@@ -68,7 +68,7 @@ public class Weapon : MonoBehaviour
 	}
 
 
-	async void Reload()
+	public async void Reload()
 	{
 		if (isReloading) return;
 		isReloading = true;
