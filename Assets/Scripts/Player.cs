@@ -4,15 +4,25 @@ public class Player : MonoBehaviour
 {
 	Health health;
 	public Weapon weapon;
+	public LayerMask weaponLayer;
+	public GameObject equipText;
 
 	void Start()
 	{
-		
+		health = GetComponent<Health>();
 	}
 
     void Update()
     {
-		health = GetComponent<Health>();
+		var cam = Camera.main.transform;
+		var collided = Physics.Raycast(cam.position, cam.forward, out var hit, 2f, weaponLayer);
+		equipText.SetActive(collided);
+		if(collided && Input.GetKeyDown(KeyCode.E))
+        {
+			weapon = hit.transform.GetComponent<Weapon>();
+        }
+
+		if (weapon == null) return;
 		// manual mode
 		if (!weapon.isAutoFire && Input.GetKeyDown(KeyCode.Mouse0))
 		{
