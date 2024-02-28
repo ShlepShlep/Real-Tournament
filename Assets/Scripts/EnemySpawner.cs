@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
+    public Vector3[] positions;
 
     void Start()
     {
@@ -19,7 +20,7 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        var randomPos = new Vector3(Random.Range(-4, 4), 1, Random.Range(-8, -6));
+        var randomPos = positions[Random.Range(0, positions.Length)];
         Instantiate(enemyPrefab, randomPos, Quaternion.identity);
     }
 }
