@@ -13,6 +13,8 @@ public class Health : MonoBehaviour
 
     public UnityEvent onDie;
     public UnityEvent onDamage;
+
+    public AudioClip hurtSound;
     void Start()
     {
         if(health == 0) health = maxHealth;
@@ -21,6 +23,7 @@ public class Health : MonoBehaviour
 
     public void Damage(int damage)
     {
+        AudioSystem.Play(hurtSound);
         health -= damage;
         onDamage.Invoke();
         if(health <= 0)

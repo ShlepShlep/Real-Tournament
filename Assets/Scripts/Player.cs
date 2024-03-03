@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
 	public LayerMask weaponLayer;
 	public GameObject equipText;
 	public Transform hand;
+	public AudioClip gunDropSound;
+	public AudioClip gunPickUpSound;
 
 	void Start()
 	{
@@ -69,6 +71,7 @@ public class Player : MonoBehaviour
 
 	void Grab(Weapon newWeapon)
     {
+		AudioSystem.Play(gunPickUpSound);
 		weapon = newWeapon;
 		weapon.GetComponent<Rigidbody>().isKinematic = true;
 		weapon.transform.position = hand.position;
@@ -80,6 +83,7 @@ public class Player : MonoBehaviour
     {
 		if (weapon == null) return;
 
+		AudioSystem.Play(gunDropSound);
 		weapon.GetComponent<Rigidbody>().isKinematic = false;
 		weapon.GetComponent<Rigidbody>().velocity = transform.forward * 5f;
 
